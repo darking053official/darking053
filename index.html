@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darking053 - Developer Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Courier New', monospace;
+            background: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        
+        #canvas-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 1;
+        }
+        
+        .content {
+            position: relative;
+            z-index: 2;
+            pointer-events: none;
+        }
+        
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 4rem;
+            color: #00ff41;
+            text-shadow: 0 0 10px #00ff41, 0 0 20px #00ff41;
+            margin-bottom: 1rem;
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            color: #fff;
+            opacity: 0.8;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            pointer-events: auto;
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: transparent;
+            border: 2px solid #00ff41;
+            color: #00ff41;
+            text-decoration: none;
+            font-family: 'Courier New', monospace;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin: 0 0.5rem;
+        }
+        
+        .btn:hover {
+            background: #00ff41;
+            color: #000;
+            box-shadow: 0 0 20px #00ff41;
+        }
+        
+        .sections {
+            pointer-events: auto;
+            padding: 4rem 2rem;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+        }
+        
+        section {
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+        
+        h2 {
+            color: #00ff41;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .skill-tag {
+            padding: 0.5rem 1rem;
+            border: 1px solid #00ff41;
+            color: #00ff41;
+            border-radius: 20px;
+            transition: all 0.3s;
+        }
+        
+        .skill-tag:hover {
+            background: #00ff41;
+            color: #000;
+        }
+        
+        .project-card {
+            border: 1px solid #333;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        
+        .project-card:hover {
+            border-color: #00ff41;
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <div id="canvas-container"></div>
+    
+    <div class="content">
+        <div class="hero">
+            <h1>Darking053</h1>
+            <p class="subtitle">Developer</p>
+            <div>
+                <a href="#about" class="btn">Hakkımda</a>
+                <a href="#projects" class="btn">Projeler</a>
+                <a href="#contact" class="btn">İletişim</a>
+            </div>
+        </div>
+        
+        <div class="sections">
+            <section id="about">
+                <h2>Hakkımda</h2>
+                <p>
+                    Açık kaynak yazılımlara, özel otomasyon çözümlerine ve modüler araçlar 
+                    geliştirmeye tutkuyla bağlı bir yazılımcıyım. Fikirleri işlevsel, temiz 
+                    ve sürdürülebilir dijital deneyimlere dönüştürmeyi seviyorum.
+                </p>
+            </section>
+            
+            <section id="skills">
+                <h2>Yetenekler</h2>
+                <div class="skills">
+                    <span class="skill-tag">JavaScript (ES6+)</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                    <span class="skill-tag">Termux</span>
+                    <span class="skill-tag">Git & GitHub</span>
+                    <span class="skill-tag">CI/CD</span>
+                </div>
+            </section>
+            
+            <section id="projects">
+                <h2>Projeler</h2>
+                <div class="project-card">
+                    <h3>Özel Bot Geliştirme</h3>
+                    <p>Node.js tabanlı otomasyon botları ve arka plan servisleri</p>
+                </div>
+                <div class="project-card">
+                    <h3>Web Uygulamaları</h3>
+                    <p>Dinamik ve etkileşimli web arayüzleri</p>
+                </div>
+                <div class="project-card">
+                    <h3>Modüler Kütüphaneler</h3>
+                    <p>Tekrar kullanılabilir kod modülleri ve araçlar</p>
+                </div>
+            </section>
+            
+            <section id="contact">
+                <h2>İletişim</h2>
+                <div class="social-links">
+                    <a href="https://github.com/darking053official" class="btn" target="_blank">GitHub</a>
+                    <a href="mailto:darking053@protonmail.com" class="btn">Email</a>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+            }
+        }
+    </script>
+    
+    <script type="module" src="./index.js"></script>
+</body>
+</html>
