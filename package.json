@@ -1,19 +1,15 @@
 {
   "name": "darking-portfolio",
   "version": "1.0.0",
-  "description": "3D Space Portfolio with Node.js",
+  "description": "3D Space Portfolio - Darking053",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node index.js"
   },
-  "keywords": ["portfolio", "threejs", "3d", "nodejs"],
+  "keywords": ["portfolio", "threejs", "3d", "nodejs", "darking053"],
   "author": "darking053official",
   "license": "MIT",
   "dependencies": {
     "express": "^4.18.2"
-  },
-  "devDependencies": {
-    "nodemon": "^3.0.1"
   }
 }
